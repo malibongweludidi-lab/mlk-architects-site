@@ -6,8 +6,27 @@
 <title>studio — mlk architects</title>
 <meta name="description" content="mlk architects — studio history, values, director profile, registrations and a chronological record of major projects.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Site-development-plan wallpaper, scoped to the studio page */
+  .studio-wallpaper::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("images/pantry-sdp.png") center center / cover no-repeat;
+    filter: invert(1) grayscale(1) contrast(1.05);
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .studio-wallpaper .site-header,
+  .studio-wallpaper main,
+  .studio-wallpaper .site-footer { position: relative; z-index: 1; }
+  /* let the drawing show through the plain sections; keep alt sections readable */
+  .studio-wallpaper main > section:not(.section-alt) { background: transparent; }
+  .studio-wallpaper main > section.section-alt { background: rgba(23, 22, 20, 0.88); }
+</style>
 </head>
-<body>
+<body class="studio-wallpaper">
 
 <header class="site-header">
   <div class="wrap">
