@@ -12,10 +12,10 @@
   .case-wallpaper::before {
     content: "";
     position: absolute;
-    inset: -28px -32px;
+    inset: 20px 0;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     filter: invert(1) grayscale(1) contrast(1.05);
     opacity: 0.06;
     z-index: 0;
@@ -23,6 +23,7 @@
   }
   .case-nikela::before   { background-image: url("images/nikela-sdp.png"); }
   .case-phuthini::before { background-image: url("images/phuthini-sdp.png"); }
+  .case-oldmill::before  { background-image: url("images/oldmill-sdp.png"); }
   .case-wallpaper > * { position: relative; z-index: 1; }
 </style>
 </head>
@@ -150,7 +151,7 @@
       </article>
 
       <!-- Old Mill Estates Residence -->
-      <article class="case reveal" data-sector="residential">
+      <article class="case reveal case-wallpaper case-oldmill" data-sector="residential">
         <div class="media wide">
           <img src="images/house-lounge.jpg" alt="open-plan living interior render of the old mill estates residence" loading="lazy">
           <span class="cap">old mill estates residence — interior render</span>
