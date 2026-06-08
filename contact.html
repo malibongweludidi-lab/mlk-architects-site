@@ -6,8 +6,27 @@
 <title>contact — mlk architects</title>
 <meta name="description" content="get in touch with mlk architects in empangeni, kwazulu-natal — by phone, email, or a short note about your project.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Elevations & sections wallpaper, scoped to the contact page (journal style) */
+  .contact-wallpaper::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("images/contact-sdp.png") center center / cover no-repeat;
+    filter: invert(1) grayscale(1) contrast(1.05);
+    opacity: 0.055;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .contact-wallpaper .site-header,
+  .contact-wallpaper main,
+  .contact-wallpaper .site-footer { position: relative; z-index: 1; }
+  /* let the drawing show through the plain sections; keep alt sections readable */
+  .contact-wallpaper main > section:not(.section-alt) { background: transparent; }
+  .contact-wallpaper main > section.section-alt { background: rgba(23, 22, 20, 0.88); }
+</style>
 </head>
-<body>
+<body class="contact-wallpaper">
 
 <header class="site-header">
   <div class="wrap">
