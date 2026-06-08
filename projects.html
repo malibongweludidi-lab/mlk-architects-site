@@ -6,6 +6,21 @@
 <title>work — mlk architects</title>
 <meta name="description" content="case studies of mlk architects' educational, residential and community work across kwazulu-natal, gauteng and beyond — shown through the practice's own design renders.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Nikela site-development-plan wallpaper, scoped to the Nikela case study only */
+  .case-wallpaper { position: relative; }
+  .case-wallpaper::before {
+    content: "";
+    position: absolute;
+    inset: -28px -32px;
+    background: url("images/nikela-sdp.png") center center / cover no-repeat;
+    filter: invert(1) grayscale(1) contrast(1.05);
+    opacity: 0.10;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .case-wallpaper > * { position: relative; z-index: 1; }
+</style>
 </head>
 <body>
 
@@ -49,7 +64,7 @@
       </div>
 
       <!-- Nikela Primary School -->
-      <article class="case reveal" data-sector="educational">
+      <article class="case reveal case-wallpaper" data-sector="educational">
         <div class="media wide">
           <img src="images/school-overview.jpg" alt="render of nikela primary school campus from above" loading="lazy">
           <span class="cap">nikela primary school — design render</span>
