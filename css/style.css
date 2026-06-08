@@ -175,6 +175,22 @@ section { padding: 120px 0; }
 .gallery.duo { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 600px) { .gallery, .gallery.duo { grid-template-columns: 1fr 1fr; } }
 
+/* ---------- Rotating slideshow ---------- */
+.slideshow { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--surface); }
+.slideshow .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; }
+.slideshow .slide.active { opacity: 1; }
+.slideshow .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slideshow .cap {
+  position: absolute; left: 0; bottom: 0; right: 0; z-index: 2;
+  padding: 16px 18px;
+  font-family: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  font-size: 0.72rem; letter-spacing: 0.04em; color: #f3f1ec;
+  background: linear-gradient(0deg, rgba(10,9,8,0.7), transparent);
+}
+.slideshow .dots { position: absolute; right: 16px; bottom: 16px; z-index: 3; display: flex; gap: 8px; }
+.slideshow .dot { width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%; background: rgba(255,255,255,0.45); cursor: pointer; transition: background 0.2s ease; }
+.slideshow .dot.active { background: #fff; }
+
 /* ---------- Plain text rows (no cards) ---------- */
 .rows { border-top: 1px solid var(--line); }
 .row {

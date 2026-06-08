@@ -51,6 +51,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Rotating slideshows
+  document.querySelectorAll('.slideshow').forEach(show => {
+    const slides = Array.from(show.querySelectorAll('.slide'));
+    if (slides.length < 2) return;
+    const interval = parseInt(show.dataset.interval, 10) || 4500;
+    const dotsWrap = show.querySelector('.dots');
+    let i = 0, timer;
+    const dots = slides.map((_, idx) => {
+      if (!dotsWrap) return null;
+      const d = document.createElement('button');
+      d.className = 'dot' + (idx === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'show slide ' + (idx + 1));
+      d.addEventListener('click', () => { go(idx); reset(); });
+      dotsWrap.appendChild(d);
+      return d;
+    });
+    function go(n) {
+      slides[i].classList.remove('active');
+      if (dots[i]) dots[i].classList.remove('active');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('active');
+      if (dots[i]) dots[i].classList.add('active');
+    }
+    function reset() { clearInterval(timer); timer = setInterval(() => go(i + 1), interval); }
+    reset();
+    show.addEventListener('mouseenter', () => clearInterval(timer));
+    show.addEventListener('mouseleave', reset);
+  });
+
   // Reveal-on-scroll
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
