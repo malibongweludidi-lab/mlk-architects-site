@@ -3,13 +3,13 @@
    near-black ground, no marketing chrome. */
 
 :root {
-  --bg: #252320;
-  --bg-alt: #1f1d1a;
-  --surface: #2e2b26;
-  --ink: #f1efea;
-  --line: #3e3a33;
-  --muted: #afa99d;
-  --accent: #d2a064;
+  --bg: #2a2b2d;
+  --bg-alt: #232426;
+  --surface: #313335;
+  --ink: #f1f1f1;
+  --line: #404245;
+  --muted: #a6a6a8;
+  --accent: #e22f29;
   --max: 1280px;
 }
 
@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(37,35,32,0.85);
+  background: rgba(42,43,45,0.85);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -263,7 +263,7 @@ section { padding: 120px 0; }
   transition: all 0.2s ease;
 }
 .sector-tag:hover { border-color: var(--accent); color: var(--accent); }
-.sector-tag.active { border-color: var(--accent); color: var(--accent); background: rgba(192,138,82,0.08); }
+.sector-tag.active { border-color: var(--accent); color: var(--accent); background: rgba(226,47,41,0.10); }
 
 /* ---------- Case study (project) blocks ---------- */
 .case {
@@ -299,7 +299,7 @@ section { padding: 120px 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #1b1916;
+  background: #1d1e1f;
   color: var(--muted);
   padding: 80px 0 32px;
   border-top: 1px solid var(--line);
