@@ -84,7 +84,7 @@ img { max-width: 100%; display: block; }
   font-family: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
 }
 .logo { display: inline-flex; align-items: center; }
-.logo-img { height: 46px; width: auto; display: block; }
+.logo-img { height: 56px; width: auto; display: block; }
 .logo .logo-text { display: none; }
 .logo.no-logo-img .logo-img { display: none; }
 .logo.no-logo-img .logo-text { display: inline; color: var(--ink); }
