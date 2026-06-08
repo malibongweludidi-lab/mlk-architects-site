@@ -3,13 +3,13 @@
    near-black ground, no marketing chrome. */
 
 :root {
-  --bg: #1f1e1b;
-  --bg-alt: #191815;
-  --surface: #282622;
-  --ink: #f0eee9;
-  --line: #37342e;
-  --muted: #a8a298;
-  --accent: #cf9a5f;
+  --bg: #2c2a26;
+  --bg-alt: #25231f;
+  --surface: #34312b;
+  --ink: #f3f1ec;
+  --line: #443f38;
+  --muted: #b6b0a4;
+  --accent: #d2a064;
   --max: 1280px;
 }
 
@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(31,30,27,0.85);
+  background: rgba(44,42,38,0.85);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -299,7 +299,7 @@ section { padding: 120px 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #161512;
+  background: #201e1a;
   color: var(--muted);
   padding: 80px 0 32px;
   border-top: 1px solid var(--line);
