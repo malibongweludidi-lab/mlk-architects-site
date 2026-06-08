@@ -6,8 +6,27 @@
 <title>journal — mlk architects</title>
 <meta name="description" content="notes from mlk architects — studio news, project milestones and short pieces on the practice's approach to architecture in south africa.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  /* Meerensee site-development-plan wallpaper, scoped to the journal page */
+  .journal-wallpaper::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("images/journal-sdp.png") center center / cover no-repeat;
+    filter: invert(1) grayscale(1) contrast(1.05);
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .journal-wallpaper .site-header,
+  .journal-wallpaper main,
+  .journal-wallpaper .site-footer { position: relative; z-index: 1; }
+  /* let the drawing show through the plain sections; keep alt sections readable */
+  .journal-wallpaper main > section:not(.section-alt) { background: transparent; }
+  .journal-wallpaper main > section.section-alt { background: rgba(23, 22, 20, 0.88); }
+</style>
 </head>
-<body>
+<body class="journal-wallpaper">
 
 <header class="site-header">
   <div class="wrap">
