@@ -40,14 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Contact form (static — no backend)
+  // Contact form — submits to FormSubmit; native POST handles delivery
   const form = document.querySelector('.contact-form');
   if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const note = form.querySelector('.form-note');
-      if (note) note.textContent = 'Thank you — your message has been noted. We will get back to you shortly. (Form is for display purposes; connect it to your email service to go live.)';
-      form.reset();
+    const note = form.querySelector('.form-note');
+    // Show confirmation when the user returns after a successful send
+    if (note && /[?&]sent=1/.test(window.location.search)) {
+      note.textContent = 'thank you — your message has been sent. we typically reply within two business days.';
+      note.style.color = 'var(--accent)';
+    }
+    // Give feedback while the form posts
+    form.addEventListener('submit', () => {
+      const label = form.querySelector('button[type="submit"] span');
+      if (label) label.textContent = 'sending…';
     });
   }
 
