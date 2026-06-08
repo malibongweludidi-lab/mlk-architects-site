@@ -83,7 +83,12 @@ img { max-width: 100%; display: block; }
   text-transform: lowercase;
   font-family: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
 }
-.logo span { color: var(--accent); }
+.logo { display: inline-flex; align-items: center; }
+.logo-img { height: 46px; width: auto; display: block; }
+.logo .logo-text { display: none; }
+.logo.no-logo-img .logo-img { display: none; }
+.logo.no-logo-img .logo-text { display: inline; color: var(--ink); }
+.logo-text span { color: var(--accent); }
 
 .nav { display: flex; gap: 34px; }
 .nav a {
