@@ -3,13 +3,13 @@
    near-black ground, no marketing chrome. */
 
 :root {
-  --bg: #111110;
-  --bg-alt: #171614;
-  --surface: #1b1a17;
-  --ink: #ededea;
-  --line: #2c2a26;
-  --muted: #9b958a;
-  --accent: #c08a52;
+  --bg: #1c1b19;
+  --bg-alt: #232220;
+  --surface: #2a2825;
+  --ink: #f3f2ef;
+  --line: #3a3833;
+  --muted: #b3ada2;
+  --accent: #cf9760;
   --max: 1280px;
 }
 
@@ -254,7 +254,7 @@ section { padding: 120px 0; }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: #0c0b0a;
+  background: #161512;
   color: var(--muted);
   padding: 80px 0 32px;
   border-top: 1px solid var(--line);
