@@ -13,12 +13,16 @@
     content: "";
     position: absolute;
     inset: -28px -32px;
-    background: url("images/nikela-sdp.png") center center / cover no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     filter: invert(1) grayscale(1) contrast(1.05);
     opacity: 0.10;
     z-index: 0;
     pointer-events: none;
   }
+  .case-nikela::before   { background-image: url("images/nikela-sdp.png"); }
+  .case-phuthini::before { background-image: url("images/phuthini-sdp.png"); }
   .case-wallpaper > * { position: relative; z-index: 1; }
 </style>
 </head>
@@ -64,7 +68,7 @@
       </div>
 
       <!-- Nikela Primary School -->
-      <article class="case reveal case-wallpaper" data-sector="educational">
+      <article class="case reveal case-wallpaper case-nikela" data-sector="educational">
         <div class="media wide">
           <img src="images/school-overview.jpg" alt="render of nikela primary school campus from above" loading="lazy">
           <span class="cap">nikela primary school — design render</span>
@@ -105,7 +109,7 @@
       </article>
 
       <!-- Phuthini Secondary School -->
-      <article class="case reveal" data-sector="educational">
+      <article class="case reveal case-wallpaper case-phuthini" data-sector="educational">
         <div class="media wide">
           <img src="images/phuthini/B.jpg" alt="entrance gateway and signage render of phuthini secondary school" loading="lazy">
           <span class="cap">phuthini secondary school — design render</span>
